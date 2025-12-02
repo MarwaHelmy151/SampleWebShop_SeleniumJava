@@ -44,6 +44,12 @@ public class Checkoutpage extends PageBase {
 	@FindBy(className = "confirm-order-next-step-button")
 	WebElement confirmBtn;
 
+	@FindBy(css = "ul[class='details'] a")
+	WebElement clickhereOrder;
+
+	@FindBy(css = ".pdf-order-button")
+	WebElement pdfBtn;
+
 	@FindBy(tagName = "strong")
 	public WebElement successfullmsg;
 
@@ -64,6 +70,12 @@ public class Checkoutpage extends PageBase {
 		paymentcontinueBtn.click();
 		paymentinfocontinueBtn.click();
 		confirmBtn.click();
+	}
+
+	public void navigateToinvoice() throws InterruptedException {
+		clickhereOrder.click();
+		Thread.sleep(3000);
+		pdfBtn.click();
 	}
 
 }

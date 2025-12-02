@@ -4,6 +4,7 @@ import org.testng.Assert;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import pageObject.DashboradPage;
 import pageObject.HomePage;
 import pageObject.SendEmailPage;
 import tests.TestBase;
@@ -11,6 +12,7 @@ import tests.TestBase;
 public class SendEmailTest extends TestBase {
 	HomePage homeobject;
 	SendEmailPage sendemailobject;
+	DashboradPage dashboardobject;
 
 	String friendsmail = "Test10@gmail.com";
 
@@ -22,8 +24,9 @@ public class SendEmailTest extends TestBase {
 
 	@And("^User can select desired product (.+) and send Email to friend$")
 	public void user_can_select_desiredProduct_and_send_email(String desiredproduct) {
+		dashboardobject = new DashboradPage(driver);
+		dashboardobject.selectProduct(desiredproduct);
 		sendemailobject = new SendEmailPage(driver);
-		sendemailobject.selectProduct(desiredproduct);
 		sendemailobject.sendEmailToFriend(friendsmail);
 	}
 

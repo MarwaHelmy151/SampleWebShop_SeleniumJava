@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
@@ -81,5 +83,16 @@ public class TestBase {
 		FileUtils.copyFile(source, file);
 		return System.getProperty("user.dir") + "//reports//" + testcaseName + ".png";
 
+	}
+
+	// method to check if the pdf is downloaded
+	public static File getLatestDownloadedPDF(String downloadDir, String filePrefix) {
+		File dir = new File(downloadDir);
+		File[] files = dir.listFiles((d, name) -> name.startsWith(filePrefix) && name.endsWith(".pdf"));
+		if (files == null || files.length == 0) {
+			return null; // No file found
+		}
+		// Return the most recently modified file
+		return Arrays.stream(files).max(Comparator.comparingLong(File::lastModified)).orElse(null);
 	}
 }

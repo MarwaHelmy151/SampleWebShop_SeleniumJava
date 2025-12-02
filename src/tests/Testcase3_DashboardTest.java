@@ -12,8 +12,10 @@ import pageObject.ShoppingcartPage;
 public class Testcase3_DashboardTest extends TestBase {
 	String email = "MariaTest3@gmail.com";
 	String password = "123456";
-	String productcategory = "Cell phones";
-	String desiredproduct = "Smartphone";
+	String productcategory = "Electronics";
+	String item = "Cell phones";
+	String desiredproduct = "Phone Cover";
+
 	HomePage homeobject;
 	LoginPage loginobject;
 	DashboradPage dashboardobject;
@@ -33,9 +35,10 @@ public class Testcase3_DashboardTest extends TestBase {
 
 	@Test(priority = 2, groups = { "Regression" })
 	public void AddProductTocard() throws InterruptedException {
+		homeobject.hovergenericElement(productcategory);
+		homeobject.selectItemfromList(item);
 		dashboardobject = new DashboradPage(driver);
-		dashboardobject.hoverelement();
-		dashboardobject.selectProduct(productcategory);
+		dashboardobject.selectProduct(desiredproduct);
 		dashboardobject.addtocard();
 		Thread.sleep(3000);
 

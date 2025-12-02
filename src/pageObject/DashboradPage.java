@@ -13,6 +13,9 @@ public class DashboradPage extends PageBase {
 		super(driver);
 	}
 
+	@FindBy(css = ".product-title a")
+	List<WebElement> productTitles;
+
 	@FindBy(css = "ul[class='top-menu'] a[href='/electronics']")
 	WebElement computersMenu;
 
@@ -25,6 +28,9 @@ public class DashboradPage extends PageBase {
 	@FindBy(css = "[value='Add to cart']")
 	WebElement addtocardBtn;
 
+	@FindBy(name = "continueshopping")
+	WebElement continueshoppingBtn;
+
 	@FindBy(css = ".content")
 	public WebElement message;
 
@@ -33,10 +39,18 @@ public class DashboradPage extends PageBase {
 		a.moveToElement(computersMenu).build().perform();
 	}
 
+	/*
+	 * public void selectProduct(String productName) { for (WebElement product :
+	 * products) if (product.getText().equals(productName)) { product.click(); } }
+	 */
+
+	// generic
 	public void selectProduct(String productName) {
-		for (WebElement product : products)
-			if (product.getText().equals(productName)) {
-				product.click();
+
+		for (WebElement productTitle : productTitles)
+			if (productTitle.getText().equals(productName)) {
+				productTitle.click();
+				break;
 			}
 	}
 
@@ -44,4 +58,7 @@ public class DashboradPage extends PageBase {
 		addtocardBtn.click();
 	}
 
+	public void continueshopping() {
+		continueshoppingBtn.click();
+	}
 }

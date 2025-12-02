@@ -3,6 +3,7 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import pageObject.DashboradPage;
 import pageObject.HomePage;
 import pageObject.LoginPage;
 import pageObject.SendEmailPage;
@@ -16,6 +17,7 @@ public class Testcase4_SendEmailTest extends TestBase {
 	HomePage homeobject;
 	LoginPage loginobject;
 	SendEmailPage sendemailobject;
+	DashboradPage dashboardobject;
 
 	@Test(priority = 1, groups = { "Regression" })
 	public void UserCanLoginSuccessfully() {
@@ -31,9 +33,11 @@ public class Testcase4_SendEmailTest extends TestBase {
 	@Test(priority = 2, groups = { "Regression" })
 	public void UserCanSendEmailSuccessfully() throws InterruptedException {
 		homeobject.selectfromtopMenu(productcategory);
-		sendemailobject = new SendEmailPage(driver);
 		// sendemailobject.selectApparelAndShoesMenu();
-		sendemailobject.selectProduct(productName);
+
+		dashboardobject = new DashboradPage(driver);
+		dashboardobject.selectProduct(productName);
+		sendemailobject = new SendEmailPage(driver);
 		sendemailobject.sendEmailToFriend(friendsmail);
 		System.out.println(sendemailobject.message.getText());
 		Assert.assertTrue(sendemailobject.message.getText().contains("Your message has been sent."));

@@ -1,47 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-26T12:15:07 EET" name="Default suite" finished-at="2025-11-26T12:15:22 EET" duration-ms="15144">
+  <suite started-at="2025-12-02T13:11:59 EET" name="Default suite" finished-at="2025-12-02T13:12:26 EET" duration-ms="27071">
     <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberRahul.TestNGTestRunner@58a9760d]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
+      <group name="Regression">
+        <method signature="Testcase3_DashboardTest.UserCanLoginSuccessfully()[pri:1, instance:tests.Testcase3_DashboardTest@61322f9d]" name="UserCanLoginSuccessfully" class="tests.Testcase3_DashboardTest"/>
+        <method signature="Testcase3_DashboardTest.AddProductTocard()[pri:2, instance:tests.Testcase3_DashboardTest@61322f9d]" name="AddProductTocard" class="tests.Testcase3_DashboardTest"/>
+        <method signature="Testcase3_DashboardTest.shoppingCartPage()[pri:3, instance:tests.Testcase3_DashboardTest@61322f9d]" name="shoppingCartPage" class="tests.Testcase3_DashboardTest"/>
+      </group> <!-- Regression -->
     </groups>
-    <test started-at="2025-11-26T12:15:07 EET" name="Default test" finished-at="2025-11-26T12:15:22 EET" duration-ms="15144">
-      <class name="cucumberRahul.TestNGTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumberRahul.TestNGTestRunner@58a9760d]" started-at="2025-11-26T12:15:07 EET" name="setUpClass" finished-at="2025-11-26T12:15:07 EET" duration-ms="628" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@46731692]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2025-12-02T13:11:59 EET" name="Default test" finished-at="2025-12-02T13:12:26 EET" duration-ms="27071">
+      <class name="tests.Testcase3_DashboardTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:tests.Testcase3_DashboardTest@61322f9d]" started-at="2025-12-02T13:11:59 EET" name="launchApplication" finished-at="2025-12-02T13:12:03 EET" duration-ms="4018" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberRahul.TestNGTestRunner@58a9760d]" started-at="2025-11-26T12:15:07 EET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-11-26T12:15:22 EET" duration-ms="14442" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["User can search for a product"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User can search for a product"]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="UserCanLoginSuccessfully()[pri:1, instance:tests.Testcase3_DashboardTest@61322f9d]" started-at="2025-12-02T13:12:03 EET" name="UserCanLoginSuccessfully" finished-at="2025-12-02T13:12:05 EET" duration-ms="1646" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumberRahul.TestNGTestRunner@58a9760d]" started-at="2025-11-26T12:15:22 EET" name="tearDownClass" finished-at="2025-11-26T12:15:22 EET" duration-ms="30" status="PASS">
+        </test-method> <!-- UserCanLoginSuccessfully -->
+        <test-method signature="AddProductTocard()[pri:2, instance:tests.Testcase3_DashboardTest@61322f9d]" started-at="2025-12-02T13:12:05 EET" name="AddProductTocard" finished-at="2025-12-02T13:12:10 EET" duration-ms="5276" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- cucumberRahul.TestNGTestRunner -->
+        </test-method> <!-- AddProductTocard -->
+        <test-method signature="shoppingCartPage()[pri:3, instance:tests.Testcase3_DashboardTest@61322f9d]" started-at="2025-12-02T13:12:10 EET" name="shoppingCartPage" finished-at="2025-12-02T13:12:26 EET" duration-ms="15693" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shoppingCartPage -->
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:tests.Testcase3_DashboardTest@61322f9d]" started-at="2025-12-02T13:12:26 EET" name="closeApplication" finished-at="2025-12-02T13:12:26 EET" duration-ms="383" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- tests.Testcase3_DashboardTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

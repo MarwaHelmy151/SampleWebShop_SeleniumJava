@@ -27,4 +27,8 @@ public class LoginPage extends PageBase {
 		passwordfield.sendKeys(password);
 		loginBtn.click();
 	}
+
+	public void openCustomerInfoPage() {
+		customerinfo.click();
+	}
 }
