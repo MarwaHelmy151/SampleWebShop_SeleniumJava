@@ -3,6 +3,7 @@
   <groupId>SampleWebShop</groupId>
   <artifactId>SampleWebShop</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
@@ -12,9 +13,31 @@
         <configuration>
           <release>21</release>
         </configuration>
-      </plugin>
+      </plugin> 
+      
+       <plugin>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-maven</artifactId>
+            <version>2.12.0</version>
+        </plugin> 
+        
+        
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.3.0</version>
+            <configuration>
+                <testFailureIgnore>false</testFailureIgnore>
+                <suiteXmlFiles>
+                    <suiteXmlFile>testng.xml</suiteXmlFile>
+                </suiteXmlFiles>
+            </configuration>
+        </plugin>
+
+        
     </plugins>
   </build>
+   
   <dependencies>
   	<dependency>
   		<groupId>Framwork</groupId>
@@ -42,24 +65,46 @@
     </dependency> 
     
     
-     <dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-java</artifactId>
-    <version>7.31.0</version>
-   </dependency>
+    <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-java</artifactId>
+        <version>7.31.0</version>
+    </dependency>
    
    <dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-testng</artifactId>
-    <version>7.31.0</version>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-testng</artifactId>
+        <version>7.31.0</version>
    </dependency>
    
     <dependency>
-     <groupId>com.fasterxml.jackson.core</groupId>
-     <artifactId>jackson-databind</artifactId>
-     <version>2.20.0</version>
+       <groupId>com.fasterxml.jackson.core</groupId>
+       <artifactId>jackson-databind</artifactId>
+       <version>2.20.0</version>
     </dependency>
-    	
-  	
+    
+    
+    <dependency>
+        <groupId>io.qameta.allure</groupId>
+        <artifactId>allure-testng</artifactId>
+        <version>2.27.0</version>
+    </dependency>
+
+    
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>5.10.2</version>
+        <scope>test</scope>
+    </dependency>
+
+
+    <dependency>
+        <groupId>io.qameta.allure</groupId>
+        <artifactId>allure-junit5</artifactId>
+        <version>2.27.0</version>
+        <scope>test</scope>
+    </dependency>
+
   </dependencies>
 </project>

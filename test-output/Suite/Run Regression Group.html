@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Run Regression Group</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Nov 27 14:26:34 EET 2025</td>
+<td>Started on:</td><td>Fri Dec 05 12:08:03 EET 2025</td>
 </tr>
-<tr><td>Total time:</td><td>29 seconds (29926 ms)</td>
+<tr><td>Total time:</td><td>47 seconds (47712 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td>Regression </td>
 </tr><tr>
@@ -77,34 +77,57 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='tests.Testcase3_DashboardTest.shoppingCartPage()'><b>shoppingCartPage</b><br>Test class: tests.Testcase3_DashboardTest</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (eb9183696e43faa7b6607eeeff031f31)] -&gt; class name: shipping-method-next-step-button] (tried for 10 second(s) with 500 milliseconds interval)
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable: Element is not currently visible and may not be manipulated
+  (Session info: chrome=142.0.7444.176)
 Build info: version: &apos;4.37.0&apos;, revision: &apos;3c1da1e342&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 141.0.7390.78 (2b53b0e231fc..., userDataDir: C:\Users\mahelmy\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59096}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59096/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: eb9183696e43faa7b6607eeeff031f31
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pageObject.PageBase.waitForWebElement(PageBase.java:23)
-	at pageObject.Checkoutpage.billingaddress(Checkoutpage.java:62)
-	at tests.Testcase3_DashboardTest.shoppingCartPage(Testcase3_DashboardTest.java:57)
+Command: [3848772299156080e2862edb4b662128, clickElement {id=f.C6BEC1524A060A0F7D9D9BE2154B242F.d.4407EA0178E4D1A6F9BFED3B2DDBD794.e.146}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 141.0.7390.78 (2b53b0e231fc..., userDataDir: C:\Users\mahelmy\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60408}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60408/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[ChromeDriver: chrome on windows (3848772299156080e2862edb4b662128)] -&gt; id: BillingNewAddress_CountryId]] -&gt; xpath: .//option[normalize-space(.) = &quot;Egypt&quot;]]
+Session ID: 3848772299156080e2862edb4b662128
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:330)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:355)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:125)
+	at pageObject.Checkoutpage.billingaddress(Checkoutpage.java:58)
+	at tests.Testcase3_DashboardTest.shoppingCartPage(Testcase3_DashboardTest.java:60)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace668139716", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace668139716'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (eb9183696e43faa7b6607eeeff031f31)] -&gt; class name: shipping-method-next-step-button] (tried for 10 second(s) with 500 milliseconds interval)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1521389237", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1521389237'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable: Element is not currently visible and may not be manipulated
+  (Session info: chrome=142.0.7444.176)
 Build info: version: &apos;4.37.0&apos;, revision: &apos;3c1da1e342&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 141.0.7390.78 (2b53b0e231fc..., userDataDir: C:\Users\mahelmy\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59096}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59096/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: eb9183696e43faa7b6607eeeff031f31
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pageObject.PageBase.waitForWebElement(PageBase.java:23)
-	at pageObject.Checkoutpage.billingaddress(Checkoutpage.java:62)
-	at tests.Testcase3_DashboardTest.shoppingCartPage(Testcase3_DashboardTest.java:57)
+Command: [3848772299156080e2862edb4b662128, clickElement {id=f.C6BEC1524A060A0F7D9D9BE2154B242F.d.4407EA0178E4D1A6F9BFED3B2DDBD794.e.146}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 141.0.7390.78 (2b53b0e231fc..., userDataDir: C:\Users\mahelmy\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60408}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60408/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[ChromeDriver: chrome on windows (3848772299156080e2862edb4b662128)] -&gt; id: BillingNewAddress_CountryId]] -&gt; xpath: .//option[normalize-space(.) = &quot;Egypt&quot;]]
+Session ID: 3848772299156080e2862edb4b662128
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:330)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:355)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:125)
+	at pageObject.Checkoutpage.billingaddress(Checkoutpage.java:58)
+	at tests.Testcase3_DashboardTest.shoppingCartPage(Testcase3_DashboardTest.java:60)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -119,15 +142,21 @@ Session ID: eb9183696e43faa7b6607eeeff031f31
 	at org.testng.TestRunner.privateRun(TestRunner.java:741)
 	at org.testng.TestRunner.run(TestRunner.java:616)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>18</td>
-<td>tests.Testcase3_DashboardTest@15a04efb</td></tr>
+<td>8</td>
+<td>tests.Testcase3_DashboardTest@4808bc9b</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -138,15 +167,35 @@ Session ID: eb9183696e43faa7b6607eeeff031f31
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='tests.Testcase3_DashboardTest.AddProductTocard()'><b>AddProductTocard</b><br>Test class: tests.Testcase3_DashboardTest</td>
+<td></td>
+<td>5</td>
+<td>tests.Testcase3_DashboardTest@4808bc9b</td></tr>
+<tr>
+<td title='tests.Testcase6_WishlistTest.selectItem()'><b>selectItem</b><br>Test class: tests.Testcase6_WishlistTest</td>
+<td></td>
+<td>2</td>
+<td>tests.Testcase6_WishlistTest@13df2a8c</td></tr>
+<tr>
+<td title='tests.Testcase4_SendEmailTest.UserCanSendEmailSuccessfully()'><b>UserCanSendEmailSuccessfully</b><br>Test class: tests.Testcase4_SendEmailTest</td>
+<td></td>
+<td>12</td>
+<td>tests.Testcase4_SendEmailTest@70e38ce1</td></tr>
+<tr>
+<td title='tests.Testcase6_WishlistTest.UserCanLoginSuccessfully()'><b>UserCanLoginSuccessfully</b><br>Test class: tests.Testcase6_WishlistTest</td>
+<td></td>
+<td>1</td>
+<td>tests.Testcase6_WishlistTest@13df2a8c</td></tr>
+<tr>
 <td title='tests.Testcase3_DashboardTest.UserCanLoginSuccessfully()'><b>UserCanLoginSuccessfully</b><br>Test class: tests.Testcase3_DashboardTest</td>
 <td></td>
 <td>1</td>
-<td>tests.Testcase3_DashboardTest@15a04efb</td></tr>
+<td>tests.Testcase3_DashboardTest@4808bc9b</td></tr>
 <tr>
-<td title='tests.Testcase3_DashboardTest.AddProductTocard()'><b>AddProductTocard</b><br>Test class: tests.Testcase3_DashboardTest</td>
+<td title='tests.Testcase4_SendEmailTest.UserCanLoginSuccessfully()'><b>UserCanLoginSuccessfully</b><br>Test class: tests.Testcase4_SendEmailTest</td>
 <td></td>
-<td>3</td>
-<td>tests.Testcase3_DashboardTest@15a04efb</td></tr>
+<td>1</td>
+<td>tests.Testcase4_SendEmailTest@70e38ce1</td></tr>
 </table><p>
 </body>
 </html>

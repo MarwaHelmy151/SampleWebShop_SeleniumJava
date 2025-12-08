@@ -10,7 +10,7 @@ public class Testcase1_RegisterTest extends TestBase {
 
 	String firstname = "Maria";
 	String lastname = "Test";
-	String email = "MariaTest85@gmail.com";
+	String email = "MariaTest88@gmail.com";
 	String password = "123456";
 
 	HomePage homeobject;

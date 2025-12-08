@@ -1,10 +1,11 @@
 @Regression  
 Feature: User can search for a product 
        
+Background:
+When   User open login page
     
 Scenario Outline: User can search for a product
 
-When   User open login page
 When   User enter valid email <email> and password <password>
 And    User can search for a product <desiredProduct> and enter <recipientName> and <recipientemail>
 Then   "The product has been added to your shopping cart" successMessage product added to cart

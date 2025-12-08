@@ -17,10 +17,13 @@ public class LoginPage extends PageBase {
 	WebElement passwordfield;
 
 	@FindBy(css = ".login-button")
-	WebElement loginBtn;
+	public WebElement loginBtn;
 
 	@FindBy(css = "div[class='header-links'] a[href='/customer/info']")
 	public WebElement customerinfo;
+
+	@FindBy(css = ".message-error")
+	public WebElement errorMessage;
 
 	public void usercanLogin(String email, String password) {
 		Email.sendKeys(email);

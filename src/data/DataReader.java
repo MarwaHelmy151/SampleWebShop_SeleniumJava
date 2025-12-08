@@ -28,3 +28,12 @@ public class DataReader {
 
 	}
 }
+
+//<listeners>
+//<listener   class-name="tests.Listeners"/>
+//</listeners>
+
+//cd C:\Users\mahelmy\Downloads\allure-2.35.1\allure-2.35.1\bin
+//allure.bat serve C:\Users\mahelmy\eclipse-workspace\SampleWebShop\allure-results
+//----
+//allure.bat generate C:\Users\mahelmy\eclipse-workspace\SampleWebShop\allure-results -o C:\Users\mahelmy\eclipse-workspace\SampleWebShop\allure-report --clean

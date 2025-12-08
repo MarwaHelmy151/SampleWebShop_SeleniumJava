@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel ="tests" name="Suite">
-<listeners>
-   <listener   class-name="tests.Listeners"/>
-</listeners>
+<suite  name="Suite">
+
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
    
        <test thread-count="5" name="Run Regression Group">
         <groups>
@@ -19,6 +21,9 @@
             <class name="tests.Testcase1_RegisterTest"/>
             <class name="tests.Testcase2_LoginTest"/>
             <class name="tests.Testcase3_DashboardTest"/>
+            <class name="tests.Testcase4_SendEmailTest"/>
+            <class name="tests.Testcase5_ContactUsTest"/>
+            <class name="tests.Testcase6_WishlistTest"/>
         </classes>
     </test>
   

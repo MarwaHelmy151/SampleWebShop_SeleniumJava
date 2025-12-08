@@ -1,10 +1,11 @@
 @Regression  
 Feature: User can change password 
        
+Background:
+When   User open login page
     
 Scenario Outline: User can change password successfully 
 
-When   User open login page
 When   User enter valid email <email> and password <password>
 And    User can navigate to customer info page and change password <password> and <newpassword>
 Then   "Password was changed" message appears

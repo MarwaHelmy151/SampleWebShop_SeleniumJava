@@ -33,6 +33,7 @@ public class Testcase2_LoginTest extends TestBase {
 		loginobject = new LoginPage(driver);
 		loginobject.usercanLogin(input.get("email"), input.get("password"));
 
+		System.out.println(loginobject.customerinfo.getText());
 		Assert.assertEquals(loginobject.customerinfo.getText(), input.get("email"));
 	}
 
@@ -42,7 +43,5 @@ public class Testcase2_LoginTest extends TestBase {
 				System.getProperty("user.dir") + "\\src\\data\\Logindata.json");
 
 		return new Object[][] { { data.get(0) }, { data.get(1) } };
-
 	}
-
 }

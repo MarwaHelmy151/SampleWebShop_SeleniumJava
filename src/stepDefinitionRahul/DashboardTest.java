@@ -42,11 +42,11 @@ public class DashboardTest extends TestBase {
 		Thread.sleep(3000);
 		System.out.println(shoppingcartobject.productscart.getText());
 		Assert.assertTrue(shoppingcartobject.productscart.getText().contains(desiredproduct));
-		shoppingcartobject.navigatetocheckoutPage();
 	}
 
 	@And("User can checkout")
 	public void User_can_checkout() throws InterruptedException {
+		shoppingcartobject.navigatetocheckoutPage();
 		checkoutobject = new Checkoutpage(driver);
 		Thread.sleep(3000);
 		checkoutobject.billingaddress("Egypt", "Cairo", "New Cairo", "12345", "12345");

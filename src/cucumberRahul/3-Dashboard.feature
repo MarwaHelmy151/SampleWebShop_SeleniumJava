@@ -1,10 +1,11 @@
 @Regression  
 Feature: User can order product  
        
+Background:
+When   User open login page
     
 Scenario Outline: User can order product successfully
 
-When   User open login page
 When   User enter valid email <email> and password <password>
 And    User can select product <productcategory> and <item> from list and select <desiredproduct>
 And    User can add desired product <desiredproduct> to cart

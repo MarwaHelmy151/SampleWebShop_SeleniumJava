@@ -17,4 +17,9 @@ public class Hooks extends TestBase {
 	public void afterScenario() {
 		driver.quit();
 	}
+
+//	@Attachment(value = "Screenshot", type = "image/png")
+//	public byte[] saveScreenshotPNG() {
+//		return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+//	}
 }

@@ -29,7 +29,7 @@ public class Testcase6_WishlistTest extends TestBase {
 		Assert.assertEquals(loginobject.customerinfo.getText(), email);
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2, groups = { "Regression" })
 	public void selectItem() {
 		homeobject = new HomePage(driver);
 		homeobject.selectfromtopMenu(productcategory);

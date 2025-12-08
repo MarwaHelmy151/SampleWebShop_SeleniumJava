@@ -85,6 +85,7 @@ public class Testcase9_InvoiceAfterPurchase extends TestBase {
 		checkoutobject.navigateToinvoice();
 	}
 
+	// verify that PDF is downloaded
 	@Test(priority = 5, groups = { "Regression" })
 	public void verifyPDFisDowloadedSuccessfully() {
 		// to turn .tmp to .pdf format after downloading file
@@ -97,7 +98,6 @@ public class Testcase9_InvoiceAfterPurchase extends TestBase {
 		options.setExperimentalOption("prefs", prefs);
 		WebDriver driver = new ChromeDriver(options);
 
-		// verify if the pdf is downloaded
 		String downloadDir = "C:\\Users\\mahelmy\\Downloads";
 		String filePrefix = "order_";
 		File latestPDF = getLatestDownloadedPDF(downloadDir, filePrefix);

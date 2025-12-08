@@ -26,9 +26,32 @@ public class LoginTest extends TestBase {
 		loginobject.usercanLogin(email, password);
 	}
 
+	@And("^user enters incorrect email (.+) and password (.+)$")
+	public void User_enter_invalid_password(String email, String password) {
+		loginobject = new LoginPage(driver);
+		loginobject.usercanLogin(email, password);
+	}
+
+	@And("user leaves the username and password fields empty")
+	public void User_leaves_fields_empty() {
+		loginobject = new LoginPage(driver);
+		loginobject.loginBtn.click();
+	}
+
 	@Then("^User can login successfully and customerinfo (.+) is found$")
 	public void user_can_login_successfully(String email) {
 		Assert.assertTrue(loginobject.customerinfo.getText().equalsIgnoreCase(email));
-		driver.quit();
+	}
+
+	@Then("user should see an error message {string}")
+	public void errorMessage_is_displayed(String string) {
+		System.out.println(loginobject.errorMessage.getText());
+		Assert.assertTrue(loginobject.errorMessage.getText().contains(string));
+	}
+
+	@Then("user should see a validation message {string}")
+	public void errorMessage_appears(String string) {
+		System.out.println(loginobject.errorMessage.getText());
+		Assert.assertTrue(loginobject.errorMessage.getText().contains(string));
 	}
 }
