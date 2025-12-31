@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.Testcase9_TestAPI">
+      <class name="tests.Testcase10_RemoveProductTest">
         <methods>
           <include name="closeApplication"/>
           <include name="launchApplication"/>
-          <include name="identifyStatusCode"/>
+          <include name="AddFirstProductTocart"/>
+          <include name="removefromShoppingCart"/>
         </methods>
-      </class> <!-- tests.Testcase9_TestAPI -->
+      </class> <!-- tests.Testcase10_RemoveProductTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

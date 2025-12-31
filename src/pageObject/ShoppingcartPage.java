@@ -17,6 +17,9 @@ public class ShoppingcartPage extends PageBase {
 	@FindBy(css = ".product-name")
 	public WebElement productscart;
 
+	@FindBy(css = ".product-name")
+	public List<WebElement> productsCart;
+
 	@FindBy(css = ".product a")
 	List<WebElement> products;
 

@@ -1,29 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-05T17:09:05 EET" name="Default suite" finished-at="2025-12-05T17:09:18 EET" duration-ms="12513">
+  <suite started-at="2025-12-31T16:47:58 EET" name="Default suite" finished-at="2025-12-31T16:48:14 EET" duration-ms="15388">
     <groups>
+      <group name="Regression">
+        <method signature="Testcase10_RemoveProductTest.UserCanLoginSuccessfully()[pri:1, instance:tests.Testcase10_RemoveProductTest@2438dcd]" name="UserCanLoginSuccessfully" class="tests.Testcase10_RemoveProductTest"/>
+        <method signature="Testcase10_RemoveProductTest.AddFirstProductTocart()[pri:2, instance:tests.Testcase10_RemoveProductTest@2438dcd]" name="AddFirstProductTocart" class="tests.Testcase10_RemoveProductTest"/>
+        <method signature="Testcase10_RemoveProductTest.addSecondProductTocart()[pri:3, instance:tests.Testcase10_RemoveProductTest@2438dcd]" name="addSecondProductTocart" class="tests.Testcase10_RemoveProductTest"/>
+        <method signature="Testcase10_RemoveProductTest.removefromShoppingCart()[pri:4, instance:tests.Testcase10_RemoveProductTest@2438dcd]" name="removefromShoppingCart" class="tests.Testcase10_RemoveProductTest"/>
+      </group> <!-- Regression -->
     </groups>
-    <test started-at="2025-12-05T17:09:05 EET" name="Default test" finished-at="2025-12-05T17:09:18 EET" duration-ms="12513">
-      <class name="tests.Testcase9_TestAPI">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:tests.Testcase9_TestAPI@41f69e84]" started-at="2025-12-05T17:09:05 EET" name="launchApplication" finished-at="2025-12-05T17:09:12 EET" duration-ms="6655" status="PASS">
+    <test started-at="2025-12-31T16:47:58 EET" name="Default test" finished-at="2025-12-31T16:48:14 EET" duration-ms="15388">
+      <class name="tests.Testcase10_RemoveProductTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:tests.Testcase10_RemoveProductTest@2438dcd]" started-at="2025-12-31T16:47:58 EET" name="launchApplication" finished-at="2025-12-31T16:48:02 EET" duration-ms="3991" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="UserCanLoginSuccessfully()[pri:1, instance:tests.Testcase9_TestAPI@41f69e84]" started-at="2025-12-05T17:09:12 EET" name="UserCanLoginSuccessfully" finished-at="2025-12-05T17:09:15 EET" duration-ms="2882" status="PASS">
+        <test-method signature="UserCanLoginSuccessfully()[pri:1, instance:tests.Testcase10_RemoveProductTest@2438dcd]" started-at="2025-12-31T16:48:02 EET" name="UserCanLoginSuccessfully" finished-at="2025-12-31T16:48:04 EET" duration-ms="1605" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- UserCanLoginSuccessfully -->
-        <test-method signature="identifyStatusCode()[pri:2, instance:tests.Testcase9_TestAPI@41f69e84]" started-at="2025-12-05T17:09:15 EET" name="identifyStatusCode" finished-at="2025-12-05T17:09:17 EET" duration-ms="2344" status="PASS">
+        <test-method signature="AddFirstProductTocart()[pri:2, instance:tests.Testcase10_RemoveProductTest@2438dcd]" started-at="2025-12-31T16:48:04 EET" name="AddFirstProductTocart" finished-at="2025-12-31T16:48:07 EET" duration-ms="2727" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- identifyStatusCode -->
-        <test-method is-config="true" signature="closeApplication()[pri:0, instance:tests.Testcase9_TestAPI@41f69e84]" started-at="2025-12-05T17:09:17 EET" name="closeApplication" finished-at="2025-12-05T17:09:18 EET" duration-ms="400" status="PASS">
+        </test-method> <!-- AddFirstProductTocart -->
+        <test-method signature="addSecondProductTocart()[pri:3, instance:tests.Testcase10_RemoveProductTest@2438dcd]" started-at="2025-12-31T16:48:07 EET" name="addSecondProductTocart" finished-at="2025-12-31T16:48:08 EET" duration-ms="1750" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addSecondProductTocart -->
+        <test-method signature="removefromShoppingCart()[pri:4, instance:tests.Testcase10_RemoveProductTest@2438dcd]" started-at="2025-12-31T16:48:08 EET" name="removefromShoppingCart" finished-at="2025-12-31T16:48:13 EET" duration-ms="4723" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removefromShoppingCart -->
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:tests.Testcase10_RemoveProductTest@2438dcd]" started-at="2025-12-31T16:48:13 EET" name="closeApplication" finished-at="2025-12-31T16:48:14 EET" duration-ms="401" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->
-      </class> <!-- tests.Testcase9_TestAPI -->
+      </class> <!-- tests.Testcase10_RemoveProductTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

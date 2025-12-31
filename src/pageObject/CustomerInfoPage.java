@@ -1,8 +1,11 @@
 package pageObject;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class CustomerInfoPage extends PageBase {
 
@@ -25,6 +28,12 @@ public class CustomerInfoPage extends PageBase {
 	@FindBy(css = ".change-password-button")
 	WebElement changePasswordBtn;
 
+	@FindBy(css = ".list li a")
+	List<WebElement> lists;
+
+	@FindBy(tagName = "h1")
+	WebElement pageBlockName;
+
 	@FindBy(css = ".result")
 	public WebElement message;
 
@@ -37,4 +46,12 @@ public class CustomerInfoPage extends PageBase {
 
 	}
 
+	public void selecLists() {
+		for (int i = 0; i < lists.size(); i++) {
+			lists.get(i).click();
+			String blockname = pageBlockName.getText().split("-")[1].strip();
+			System.out.println(blockname);
+			Assert.assertTrue(lists.get(i).getText().equals(blockname));
+		}
+	}
 }

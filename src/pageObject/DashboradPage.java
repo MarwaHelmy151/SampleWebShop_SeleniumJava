@@ -25,8 +25,11 @@ public class DashboradPage extends PageBase {
 	@FindBy(xpath = "//ul[@class='top-menu']//a[@href='/electronics']/following-sibling::ul/li")
 	List<WebElement> products;
 
-	@FindBy(css = "[value='Add to cart']")
+	@FindBy(css = ".add-to-cart-button")
 	WebElement addtocardBtn;
+
+	@FindBy(css = ".add-to-cart-button")
+	List<WebElement> addtocardButton;
 
 	@FindBy(name = "continueshopping")
 	WebElement continueshoppingBtn;
@@ -52,6 +55,18 @@ public class DashboradPage extends PageBase {
 				productTitle.click();
 				break;
 			}
+	}
+
+	// select many products
+	public void addProducts() throws InterruptedException {
+		for (int i = 0; i < productTitles.size(); i++) {
+			productTitles.get(i).click();
+			Thread.sleep(3000);
+			if (!addtocardButton.isEmpty() && addtocardButton.get(0).isDisplayed()) {
+				addtocardButton.get(0).click();
+			}
+			driver.navigate().back();
+		}
 	}
 
 	public void addtocard() {
